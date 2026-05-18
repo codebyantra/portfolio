@@ -1,0 +1,268 @@
+/* Projects Section Styles - Modern Gradient Design with Strong Animations */
+
+@import './Animations.css';
+
+.projects {
+  padding: 6rem 2rem;
+  background: linear-gradient(135deg, #0A0E27 0%, #1A1F3A 50%, #0A0E27 100%);
+  border-top: 1px solid #2A3050;
+  animation: fadeIn 0.8s ease-out;
+}
+
+.projects-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.project-img{
+  width:100%;
+  height:200px;
+  object-fit:cover;
+  border-radius:10px;
+}
+
+@media (max-width: 768px) {
+  .projects {
+    padding: 4rem 1rem;
+  }
+}
+
+/* Section Header */
+.projects-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem;
+  margin-bottom: 3rem;
+  animation: slideInLeft 0.8s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+@media (max-width: 768px) {
+  .projects-header {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
+
+.projects-divider {
+  width: 3px;
+  height: 60px;
+  background: linear-gradient(180deg, #00D9FF 0%, #7C3AED 100%);
+  flex-shrink: 0;
+  border-radius: 2px;
+  animation: slideInDown 0.8s cubic-bezier(0.34, 1.56, 0.64, 1);
+  box-shadow: 0 0 15px rgba(0, 217, 255, 0.4);
+}
+
+@media (max-width: 768px) {
+  .projects-divider {
+    display: none;
+  }
+}
+
+.projects-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #FFFFFF;
+  line-height: 1.2;
+  animation: slideInRight 0.8s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+@media (max-width: 768px) {
+  .projects-title {
+    font-size: 1.875rem;
+  }
+}
+
+/* Projects Grid */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  animation: fadeIn 0.8s ease-out 0.2s both;
+}
+
+@media (max-width: 768px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}
+
+/* Project Card */
+.project-card {
+  border: 1px solid #2A3050;
+  background: linear-gradient(135deg, rgba(26, 31, 58, 0.5) 0%, rgba(42, 48, 80, 0.3) 100%);
+  overflow: hidden;
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  border-radius: 0.75rem;
+  animation: scaleIn 0.7s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.project-card:hover {
+  border-color: #00D9FF;
+  box-shadow: 0 18px 40px rgba(0, 217, 255, 0.25);
+  transform: translateY(-10px) scale(1.02);
+  background: linear-gradient(135deg, rgba(0, 217, 255, 0.08) 0%, rgba(124, 58, 237, 0.08) 100%);
+  animation: glow 1.5s ease-in-out infinite, swing 0.6s ease-in-out;
+}
+
+/* Project Image */
+.project-image {
+  width: 100%;
+  height: 200px;
+  background: linear-gradient(135deg, rgba(0, 217, 255, 0.1) 0%, rgba(124, 58, 237, 0.1) 100%);
+  border-bottom: 1px solid #2A3050;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+  animation: slideInDown 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.project-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+  animation: fadeIn 0.8s ease-out;
+}
+
+.project-card:hover .project-image img {
+  transform: scale(1.12) rotate(2deg);
+  animation: float 2s ease-in-out infinite;
+}
+
+.project-image-placeholder {
+  font-family: 'Inter', monospace;
+  font-size: 0.875rem;
+  background: linear-gradient(135deg, #00D9FF 0%, #7C3AED 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-align: center;
+  opacity: 0.7;
+  animation: slideInUp 0.8s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* Project Content */
+.project-content {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  animation: slideInUp 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) 0.1s both;
+}
+
+.project-name {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #FFFFFF;
+  margin-bottom: 0.75rem;
+  animation: slideInDown 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.project-description {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.875rem;
+  line-height: 1.6;
+  color: #9CA3AF;
+  margin-bottom: 1rem;
+  flex-grow: 1;
+  animation: fadeIn 0.8s ease-out 0.2s both;
+}
+
+/* Tech Stack */
+.project-tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+  animation: slideInUp 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) 0.2s both;
+}
+
+.tech-tag {
+  display: inline-block;
+  padding: 0.375rem 0.75rem;
+  border: 1px solid #2A3050;
+  background: linear-gradient(135deg, rgba(0, 217, 255, 0.1) 0%, rgba(124, 58, 237, 0.1) 100%);
+  color: #00D9FF;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.75rem;
+  border-radius: 0.375rem;
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  animation: scaleIn 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.tech-tag:hover {
+  background: linear-gradient(135deg, #00D9FF 0%, #7C3AED 100%);
+  border-color: #00D9FF;
+  color: white;
+  transform: translateY(-3px) scale(1.1);
+  box-shadow: 0 6px 12px rgba(0, 217, 255, 0.25);
+  animation: swing 0.4s ease-in-out;
+}
+
+/* Project Links */
+.project-links {
+  display: flex;
+  gap: 1rem;
+  margin-top: auto;
+  animation: slideInUp 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) 0.3s both;
+}
+
+.project-link {
+  flex: 1;
+  padding: 0.75rem 1rem;
+  border: 1px solid #2A3050;
+  background-color: transparent;
+  color: #D1D5DB;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  text-transform: uppercase;
+  text-align: center;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border-radius: 0.375rem;
+  animation: scaleIn 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.project-link:hover {
+  border-color: #00D9FF;
+  color: #00D9FF;
+  background: linear-gradient(135deg, rgba(0, 217, 255, 0.1) 0%, rgba(124, 58, 237, 0.1) 100%);
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 217, 255, 0.2);
+  animation: swing 0.4s ease-in-out;
+}
+
+.project-link.primary {
+  border: none;
+  background: linear-gradient(135deg, #00D9FF 0%, #7C3AED 50%, #D946EF 100%);
+  background-size: 200% 200%;
+  color: white;
+}
+
+.project-link.primary:hover {
+  box-shadow: 0 12px 24px rgba(0, 217, 255, 0.3);
+  animation: gradientShift 2s ease infinite, glow 1.5s ease-in-out infinite, pulse 1.5s ease-in-out infinite;
+}
+
+.link-icon {
+  width: 14px;
+  height: 14px;
+  display: inline-block;
+}

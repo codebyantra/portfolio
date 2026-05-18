@@ -1,0 +1,362 @@
+/* Footer Component Styles - Modern Gradient Design with Strong Animations */
+
+@import './Animations.css';
+
+.footer {
+  padding: 4rem 2rem 2rem;
+  background: linear-gradient(135deg, #0A0E27 0%, #1A1F3A 50%, #0A0E27 100%);
+  border-top: 1px solid #2A3050;
+  margin-top: 2rem;
+  animation: slideInUp 0.8s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.footer-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .footer {
+    padding: 2rem 1rem 1rem;
+  }
+}
+
+/* Footer Content */
+.footer-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 3rem;
+  margin-bottom: 2rem;
+  animation: fadeIn 0.8s ease-out 0.2s both;
+}
+
+@media (max-width: 1024px) {
+  .footer-content {
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer-content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
+/* Footer Section */
+.footer-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  animation: slideInUp 0.8s cubic-bezier(0.34, 1.56, 0.64, 1);
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.footer-section:hover {
+  transform: translateY(-5px);
+}
+
+.footer-section-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, #00D9FF 0%, #7C3AED 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  animation: slideInDown 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.footer-section-content {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.875rem;
+  line-height: 1.6;
+  color: #9CA3AF;
+  animation: fadeIn 0.8s ease-out 0.3s both;
+}
+
+.footer-section-content a {
+  color: #D1D5DB;
+  text-decoration: none;
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  position: relative;
+}
+
+.footer-section-content a::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #00D9FF 0%, #7C3AED 100%);
+  transition: width 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.footer-section-content a:hover {
+  background: linear-gradient(135deg, #00D9FF 0%, #7C3AED 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: glow 1s ease-in-out;
+}
+
+.footer-section-content a:hover::after {
+  width: 100%;
+}
+
+/* Quick Links */
+.quick-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.quick-link {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.875rem;
+  color: #D1D5DB;
+  text-decoration: none;
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  cursor: pointer;
+  background: none;
+  border: none;
+  text-align: left;
+  padding: 0;
+  position: relative;
+  animation: slideInLeft 0.8s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.quick-link::before {
+  content: '';
+  position: absolute;
+  left: -8px;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #00D9FF 0%, #7C3AED 100%);
+  transition: width 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.quick-link:hover {
+  background: linear-gradient(135deg, #00D9FF 0%, #7C3AED 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  transform: translateX(5px);
+  animation: swing 0.5s ease-in-out;
+}
+
+.quick-link:hover::before {
+  width: 8px;
+}
+
+/* Social Links */
+.social-links {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  animation: slideInRight 0.8s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.social-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border: 1px solid #2A3050;
+  background-color: rgba(26, 31, 58, 0.5);
+  color: #D1D5DB;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  border-radius: 0.5rem;
+  text-decoration: none;
+  font-size: 1.25rem;
+  animation: scaleIn 0.7s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.social-link:hover {
+  border-color: #00D9FF;
+  background: linear-gradient(135deg, rgba(0, 217, 255, 0.1) 0%, rgba(124, 58, 237, 0.1) 100%);
+  color: #00D9FF;
+  transform: translateY(-6px) scale(1.12) rotate(5deg);
+  box-shadow: 0 12px 24px rgba(0, 217, 255, 0.3);
+  animation: swing 0.6s ease-in-out, glow 1.5s ease-in-out infinite;
+}
+
+/* Footer Bottom */
+.footer-bottom {
+  padding-top: 2rem;
+  border-top: 1px solid #2A3050;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  animation: slideInUp 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) 0.2s both;
+}
+
+@media (max-width: 768px) {
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+.footer-copyright {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.75rem;
+  color: #6B7280;
+  letter-spacing: 0.5px;
+  animation: slideInLeft 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.footer-links {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  animation: slideInRight 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+@media (max-width: 768px) {
+  .footer-links {
+    gap: 1rem;
+  }
+}
+
+.footer-link {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.75rem;
+  color: #6B7280;
+  text-decoration: none;
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  letter-spacing: 0.5px;
+  position: relative;
+}
+
+.footer-link::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: linear-gradient(90deg, #00D9FF 0%, #7C3AED 100%);
+  transition: width 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.footer-link:hover {
+  background: linear-gradient(135deg, #00D9FF 0%, #7C3AED 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: swing 0.4s ease-in-out;
+}
+
+.footer-link:hover::after {
+  width: 100%;
+}
+
+.whatsapp-float{
+  position: fixed;
+  bottom: 125px;   /* thoda upar ho jayega (scroll button ke upar) */
+  right: 35px;
+  width: 55px;
+  height: 55px;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 26px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  z-index: 999;
+  transition: transform 0.3s;
+  animation: whatsappPulse 2s infinite;
+}
+
+.whatsapp-float:hover{
+  transform: scale(1.15);
+}
+
+/* Animation */
+@keyframes whatsappPulse{
+  0%{
+    box-shadow: 0 0 0 0 rgba(37,211,102,0.7);
+  }
+  70%{
+    box-shadow: 0 0 0 15px rgba(37,211,102,0);
+  }
+  100%{
+    box-shadow: 0 0 0 0 rgba(37,211,102,0);
+  }
+}
+/* 📱 Tablet */
+@media (max-width: 768px){
+  .whatsapp-float{
+    font-size: 36px;
+    bottom: 80px;
+    right: 18px;
+  }
+}
+
+/* 📱 Mobile */
+@media (max-width: 480px){
+  .whatsapp-float{
+    font-size: 32px;
+    bottom: 75px;
+    right: 15px;
+  }
+}
+
+/* Scroll to Top Button */
+.scroll-to-top {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  width: 50px;
+  height: 50px;
+  border: 1px solid #2A3050;
+  background: linear-gradient(135deg, rgba(0, 217, 255, 0.1) 0%, rgba(124, 58, 237, 0.1) 100%);
+  color: #00D9FF;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.5rem;
+  z-index: 999;
+  opacity: 0;
+  visibility: hidden;
+  font-size: 1.25rem;
+  font-weight: 700;
+  animation: slideInRight 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.scroll-to-top.visible {
+  opacity: 1;
+  visibility: visible;
+  animation: slideInRight 0.6s cubic-bezier(0.34, 1.56, 0.64, 1), float 3s ease-in-out infinite;
+}
+
+.scroll-to-top:hover {
+  border-color: #00D9FF;
+  background: linear-gradient(135deg, #00D9FF 0%, #7C3AED 100%);
+  color: white;
+  transform: translateY(-8px) scale(1.15);
+  box-shadow: 0 16px 32px rgba(0, 217, 255, 0.4);
+  animation: swing 0.6s ease-in-out, glow 1.5s ease-in-out infinite, pulse 1.5s ease-in-out infinite;
+}
+
+@media (max-width: 768px) {
+  .scroll-to-top {
+    bottom: 1rem;
+    right: 1rem;
+    width: 40px;
+    height: 40px;
+  }
+}
