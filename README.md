@@ -82,13 +82,9 @@ I am a passionate Full-Stack Developer focused on building responsive, user-frie
 
 ## 📬 Contact
 
-- GitHub: https://github.com/YOUR_USERNAME
-- LinkedIn: https://linkedin.com/in/YOUR_USERNAME
-- Email: YOUR_EMAIL
-
-## 📄 License
-
-This project is licensed under the MIT License.
+- GitHub: [https://github.com/codebyantra]
+- LinkedIn: https://www.linkedin.com/in/antra-vishwakarma-52695a326/
+- Email: atrix.dev26@gmail.com
 
 ---
 
